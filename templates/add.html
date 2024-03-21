@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+      </div>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="{{url_for ('home')}}" class="nav-link px-2 link-secondary">Home</a></li>
+      </ul>
+
+    </header>
+  </div>
+
+    <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3" align="center">Add New Cafe</h4>
+        <form action="{{url_for('post_new_cafe')}}" method="post">
+
+
+            <div class="col-12">
+              <label class="form-label">Cafe Name</label>
+              <input name="name" type="text" class="form-control" id="cafe.name" placeholder="Enter Name of Cafe"/>
+            </div>
+
+
+            <div class="col-12">
+              <label class="form-label">Map Url</label>
+              <input name="map_url" type="text" class="form-control" id="cafe.map_url" placeholder="Enter Map URL" required="">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Img Url</label>
+              <input name="img_url" type="text" class="form-control" id="cafe.img_url" placeholder="Enter Img URL" required="">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Location</label>
+              <input name="location" type="text" class="form-control" id="cafe.location" placeholder="Enter Address" required="">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Power Sockets</label>
+              <input name="has_sockets" type="text" class="form-control" id="cafe.has_sockets" placeholder="True or False" required="">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Toilets</label>
+              <input name="has_toilet" type="text" class="form-control" id="cafe.has_toilet" placeholder="True or False" required="">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Wifi</label>
+              <input name="has_wifi" type="text" class="form-control" id="cafe.has_wifi" placeholder="True or False" required="">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Can Take Calls</label>
+              <input name="can_take_calls" type="text" class="form-control" id="cafe.can_take_calls" placeholder="True or False" required="">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Seats</label>
+              <input name="seats" type="text" class="form-control" id="cafe.seats" placeholder="Enter number of seats, 0 if None" required="">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Coffee Price</label>
+              <input name="coffee_price" type="text" class="form-control" id="cafe.coffee_price" placeholder="Coffee price" required="">
+            </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit" >Add</button>
+        </form>
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
